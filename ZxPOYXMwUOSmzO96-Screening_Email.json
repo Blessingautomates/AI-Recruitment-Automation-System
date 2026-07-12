@@ -1,0 +1,815 @@
+{
+  "name": "Screening + Email",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "update",
+        "base": {
+          "__rl": true,
+          "value": "apprI6AjAAtQwrAGV",
+          "mode": "id"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblYqCHMUqmWD14zn",
+          "mode": "id"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Status": "Review needed",
+            "id": "={{ $('Set node').item.json.id }}",
+            "Years of Experience": 0
+          },
+          "matchingColumns": [
+            "id",
+            "Status"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": false
+            },
+            {
+              "id": "Full Name",
+              "displayName": "Full Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Role Applied",
+              "displayName": "Role Applied",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Software Engineer",
+                  "value": "Software Engineer"
+                },
+                {
+                  "name": "Product Manager",
+                  "value": "Product Manager"
+                },
+                {
+                  "name": "Sales Executive",
+                  "value": "Sales Executive"
+                },
+                {
+                  "name": "Operations Officer",
+                  "value": "Operations Officer"
+                },
+                {
+                  "name": "Customer Support",
+                  "value": "Customer Support"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Years of Experience",
+              "displayName": "Years of Experience",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Applied",
+                  "value": "Applied"
+                },
+                {
+                  "name": "Qualified",
+                  "value": "Qualified"
+                },
+                {
+                  "name": "Interview Scheduled",
+                  "value": "Interview Scheduled"
+                },
+                {
+                  "name": "Offer Extended",
+                  "value": "Offer Extended"
+                },
+                {
+                  "name": "Accepted",
+                  "value": "Accepted"
+                },
+                {
+                  "name": "Rejected",
+                  "value": "Rejected"
+                },
+                {
+                  "name": "Review needed",
+                  "value": "Review needed"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Interview Date",
+              "displayName": "Interview Date",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "dateTime",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Start Date",
+              "displayName": "Start Date",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "dateTime",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Rejection stage",
+              "displayName": "Rejection stage",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Screening",
+                  "value": "Screening"
+                },
+                {
+                  "name": "Interview",
+                  "value": "Interview"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Application ID",
+              "displayName": "Application ID",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "CV",
+              "displayName": "CV",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "array",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Job Role link",
+              "displayName": "Job Role link",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "array",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Minimum Experience Required",
+              "displayName": "Minimum Experience Required",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": true
+            },
+            {
+              "id": "Is Technical Role",
+              "displayName": "Is Technical Role",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": true
+            },
+            {
+              "id": "Created time",
+              "displayName": "Created time",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        624,
+        96
+      ],
+      "id": "b4693d17-1738-4158-9c68-2372c62c7fe0",
+      "name": "Review needed",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "2KTY6jQ63cLlXfQJ",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Set node').item.json.fields.Email }}",
+        "subject": "Application Update",
+        "emailType": "text",
+        "message": "=Hi {{ $('Set node').item.json.fields['Full Name'] }} ,  \n\nThank you for your application. \nWe will review your profile and get back to you. \n\nBest regards, \nHR Team",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        832,
+        96
+      ],
+      "id": "1d6d4747-8446-477c-93da-56f98ad9ba90",
+      "name": "Application Update",
+      "webhookId": "a5d43e0c-08af-4d7e-9c0e-01eff000f3ee",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "rZC24jIIkZrECN4q",
+          "name": "Gmail OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.fields.Email }}",
+        "subject": "Application Update",
+        "emailType": "text",
+        "message": "=Hi {{ $json.fields['Full Name'] }} , \n\nThank you for applying for {{ $json.fields['Role Applied'] }} . \n\nWe are pleased to inform you that you have passed the initial screening. Our team will contact you soon. \n\nBest regards,\nHR Team",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        832,
+        -96
+      ],
+      "id": "05ccc1f7-63c2-495b-8c3e-5b8cbe2d2227",
+      "name": "Application Update1",
+      "webhookId": "145a99dd-aaba-44ef-9169-5d869640086d",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "rZC24jIIkZrECN4q",
+          "name": "Gmail OAuth2 API"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "base": {
+          "__rl": true,
+          "value": "apprI6AjAAtQwrAGV",
+          "mode": "id"
+        },
+        "table": {
+          "__rl": true,
+          "value": "tblYqCHMUqmWD14zn",
+          "mode": "id"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Status": "Qualified",
+            "id": "={{ $json.id }}",
+            "Years of Experience": 0
+          },
+          "matchingColumns": [
+            "Status",
+            "id"
+          ],
+          "schema": [
+            {
+              "id": "id",
+              "displayName": "id",
+              "required": false,
+              "defaultMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": false
+            },
+            {
+              "id": "Full Name",
+              "displayName": "Full Name",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Role Applied",
+              "displayName": "Role Applied",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Software Engineer",
+                  "value": "Software Engineer"
+                },
+                {
+                  "name": "Product Manager",
+                  "value": "Product Manager"
+                },
+                {
+                  "name": "Sales Executive",
+                  "value": "Sales Executive"
+                },
+                {
+                  "name": "Operations Officer",
+                  "value": "Operations Officer"
+                },
+                {
+                  "name": "Customer Support",
+                  "value": "Customer Support"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Years of Experience",
+              "displayName": "Years of Experience",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "number",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Status",
+              "displayName": "Status",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Applied",
+                  "value": "Applied"
+                },
+                {
+                  "name": "Qualified",
+                  "value": "Qualified"
+                },
+                {
+                  "name": "Interview Scheduled",
+                  "value": "Interview Scheduled"
+                },
+                {
+                  "name": "Offer Extended",
+                  "value": "Offer Extended"
+                },
+                {
+                  "name": "Accepted",
+                  "value": "Accepted"
+                },
+                {
+                  "name": "Rejected",
+                  "value": "Rejected"
+                },
+                {
+                  "name": "Review needed",
+                  "value": "Review needed"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Interview Date",
+              "displayName": "Interview Date",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "dateTime",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Start Date",
+              "displayName": "Start Date",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "dateTime",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Rejection stage",
+              "displayName": "Rejection stage",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "options",
+              "options": [
+                {
+                  "name": "Screening",
+                  "value": "Screening"
+                },
+                {
+                  "name": "Interview",
+                  "value": "Interview"
+                }
+              ],
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Application ID",
+              "displayName": "Application ID",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "CV",
+              "displayName": "CV",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "array",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Job Role link",
+              "displayName": "Job Role link",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "array",
+              "readOnly": false,
+              "removed": false
+            },
+            {
+              "id": "Minimum Experience Required",
+              "displayName": "Minimum Experience Required",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": true
+            },
+            {
+              "id": "Is Technical Role",
+              "displayName": "Is Technical Role",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": true
+            },
+            {
+              "id": "Created time",
+              "displayName": "Created time",
+              "required": false,
+              "defaultMatch": false,
+              "canBeUsedToMatch": true,
+              "display": true,
+              "type": "string",
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.airtable",
+      "typeVersion": 2.2,
+      "position": [
+        624,
+        -96
+      ],
+      "id": "ea9df163-decd-4246-adb5-af6157ff48f4",
+      "name": "Qualified",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "2KTY6jQ63cLlXfQJ",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "authentication": "airtableTokenApi",
+        "baseId": {
+          "__rl": true,
+          "value": "apprI6AjAAtQwrAGV",
+          "mode": "id"
+        },
+        "tableId": {
+          "__rl": true,
+          "value": "tblYqCHMUqmWD14zn",
+          "mode": "id"
+        },
+        "triggerField": "Created time",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.airtableTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "4a2e6310-1b55-4f03-a1c3-c742c7b2da68",
+      "name": "Record created",
+      "credentials": {
+        "airtableTokenApi": {
+          "id": "2KTY6jQ63cLlXfQJ",
+          "name": "Airtable Personal Access Token account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "8ce0bada-d5cf-4b1c-be61-93787c34dd6c",
+              "name": "id",
+              "value": "={{ $json.id }}",
+              "type": "string"
+            },
+            {
+              "id": "01f8ff85-1d7e-4870-aac1-f8545e785a1d",
+              "name": "fields['Full Name']",
+              "value": "={{ $json.fields['Full Name'] }}",
+              "type": "string"
+            },
+            {
+              "id": "1cc95a07-5eae-4713-bccb-bd02f3af75bb",
+              "name": "fields.Email",
+              "value": "={{ $json.fields.Email }}",
+              "type": "string"
+            },
+            {
+              "id": "79179c63-9eec-491e-94c9-bef37f657330",
+              "name": "fields['Role Applied']",
+              "value": "={{ $json.fields['Role Applied'] }}",
+              "type": "string"
+            },
+            {
+              "id": "4ea871ca-8b49-425f-9906-bcc295cc97a9",
+              "name": "fields['Years of Experience']",
+              "value": "={{ $json.fields['Years of Experience'] }}",
+              "type": "number"
+            },
+            {
+              "id": "3d4c783e-75fb-492e-afdb-fce43db2d4dd",
+              "name": "fields.Status",
+              "value": "={{ $json.fields.Status }}",
+              "type": "string"
+            },
+            {
+              "id": "2f5f3cb0-0d2f-4bb0-bece-4328a43b68b6",
+              "name": "fields.CV[0].url",
+              "value": "={{ $json.fields.CV[0].url }}",
+              "type": "string"
+            },
+            {
+              "id": "d0dcb2dd-eb6f-447a-8208-970226dcf226",
+              "name": "fields['Created time']",
+              "value": "={{ $json.fields['Created time'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        208,
+        0
+      ],
+      "id": "abf59b57-fb4a-4ba7-84c3-8f42c381c829",
+      "name": "Set node"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "74c30d32-b632-41a4-91b5-9f7e6b9246fb",
+              "leftValue": "={{ $json.fields['Years of Experience'] }}",
+              "rightValue": 2,
+              "operator": {
+                "type": "number",
+                "operation": "gte"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        416,
+        0
+      ],
+      "id": "1e44c9a2-81d7-4823-a63e-ee6771ebfc35",
+      "name": "Experience >= 2"
+    }
+  ],
+  "connections": {
+    "Review needed": {
+      "main": [
+        [
+          {
+            "node": "Application Update",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Qualified": {
+      "main": [
+        [
+          {
+            "node": "Application Update1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Record created": {
+      "main": [
+        [
+          {
+            "node": "Set node",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set node": {
+      "main": [
+        [
+          {
+            "node": "Experience >= 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Experience >= 2": {
+      "main": [
+        [
+          {
+            "node": "Qualified",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Review needed",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "staticData": {
+    "node:Record created": {
+      "lastTimeChecked": "2026-04-20T21:09:06Z"
+    }
+  },
+  "pinData": {},
+  "triggerCount": 1,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  }
+}
